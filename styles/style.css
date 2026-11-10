@@ -3,6 +3,7 @@
     --color-seconday: #3F564C; 
     --color-fondo: #F3F6F2; 
     --color-fondo-container: #FDFDFC; 
+    --color-letras-blanco: #FFFFFF;
     
 }
 
@@ -53,8 +54,10 @@ h2{
 }
 
 .nav-links a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
     text-decoration: none;
-    color: var(--color-principal);
 }
 
 .section-portada{
@@ -65,7 +68,7 @@ h2{
 
 .section-portada h1 {
     color: var(--color-principal);
-    font-size: 55px;
+    font-size: 70px;
 }
 
 .section-portada p {
