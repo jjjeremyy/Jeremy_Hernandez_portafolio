@@ -124,3 +124,11 @@ main {
     position: relative;
     z-index: 2;
 }
+
+h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    letter-spacing: -0.03em;
+    margin: 0 0 40px;
+}
