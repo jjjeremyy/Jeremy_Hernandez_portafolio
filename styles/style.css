@@ -29,11 +29,11 @@ html, body {
   height: 100%;
 }
 
-body{
-    color: var(--color-principals);
+body {
+    font-family: var(--body);
+    color: var(--color-principal);  
     background-color: var(--color-fondo);
 }
-
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -41,34 +41,56 @@ main {
 }
 
 .navbar {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 14px);
     left: 50%;
-    top: calc(env(safe-area-inset-top,0px) + 14px);
-    padding: 6px;
     transform: translateX(-50%);
     z-index: 20;
     display: flex;
     gap: 4px;
-    justify-content: center;
-    position: fixed; 
+    padding: 6px;
+    max-width: calc(100% - 24px);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-fondo-container) 75%, transparent);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    backdrop-filter: blur(14px) saturate(1.4);
+    border: 1px solid rgba(31, 58, 46, .08);
     box-shadow: var(--shadow);
-    animation: drop .9s .9s cubic-bezier(.2, .9, .3, 1.2) both;
-    background: color-mix(in srgb,var(--surface) 80%,transparent)
+    animation: drop .9s .3s cubic-bezier(.2, .9, .3, 1.2) both;
 }
 
+
+@keyframes drop {
+    from { opacity: 0; transform: translate(-50%, -30px); }
+    to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+
 .navbar a {
-    text-decoration: none;
+    font-family: var(--body);
+    font-weight: 500;
     font-size: .92rem;
+    color: var(--color-seconday);
+    text-decoration: none;
+    white-space: nowrap;
     padding: 8px 16px;
     border-radius: 999px;
     transition: background .25s, color .25s;
 }
-a {
-    color: inherit;
-}
 
 .navbar a:hover {
-    background-color: var(--color-principal);
+    background: color-mix(in srgb, var(--color-principal) 100%, transparent);
     color: var(--color-letras-blanco);
+}
+
+.navbar a.active {
+    background: var(--color-principal);
+    color: var(--color-letras-blanco);
+}
+
+.navbar a:focus-visible {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 2px;
 }
 
 .hero {
