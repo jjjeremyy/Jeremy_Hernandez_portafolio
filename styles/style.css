@@ -171,3 +171,32 @@ h2 {
     box-shadow: var(--shadow);
     font-size: 0.95rem;
 }
+
+.section-trayectoria {
+    height: 100vh;       
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.section-trayectoria h2 {
+    text-align: center;
+}
+.container-trayectoria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.container-estudios {
+    background-color: var(--color-fondo-container);
+    width: 500px;
+    height: 300px;
+}
+
+.container-experiencia{
+    background-color: var(--color-fondo-container);
+    width: 500px;
+    height: 300px;
+}
