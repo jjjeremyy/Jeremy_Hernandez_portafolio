@@ -131,3 +131,27 @@ h2 {
     width: 300px;
     height: 200px;
 }
+
+.section-proyectos{
+    height: 100vh;       
+    box-sizing: border-box;
+}
+
+.imagenSobreMi {
+    width: 300px;
+    height: 600px;
+}
+
+.section-sobre-mi {
+    height: 100vh;       
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.sobre-mi-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
