@@ -7,6 +7,8 @@
     --shadow: 0 30px 60px -28px rgba(31, 58, 46, .25), 0 8px 18px -12px rgba(31, 58, 46, .12);
     --body: 'DM Sans', system-ui, sans-serif;
     --display: 'Bricolage Grotesque',system-ui,sans-serif;
+    --border-blanco: #e1e9e3;
+    --border-verde:  #8cc9aa; 
 }
 
 html {
@@ -21,11 +23,16 @@ html, body {
   height: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--body);
     color: var(--color-principal);  
     background-color: var(--color-fondo);
 }
+
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -172,31 +179,154 @@ h2 {
     font-size: 0.95rem;
 }
 
-.section-trayectoria {
-    height: 100vh;       
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+.trayectoria {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
 }
-.section-trayectoria h2 {
-    text-align: center;
+
+.trayectoria h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
-.container-trayectoria {
+
+.trayectoria > p {
+    color: var(--color-seconday);
+    margin-bottom: 35px;
+}
+
+/* CONTENEDOR */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+/* TARJETAS */
+
+.card {
+    background: var(--color-fondo-container);
+    border: 1px solid var(--border-blanco);
+    border-radius: 18px;
+    overflow: hidden;
+
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* TARJETA ABIERTA */
+
+.trayectoria .card.active {
+    background: #e0f3e9;
+    border-color: var(--border-verde);
+
+     transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* CABECERA */
+
+.card-header {
+    width: 100%;
+    padding: 24px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: inherit;
+}
+
+.category {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--color-seconday);
+}
+
+.card-header h2 {
+    font-size: 25px;
+    margin: 18px 0 8px;
+}
+
+.card-header p {
+    font-size: 14px;
+    color: var(--color-seconday);
+    margin: 0;
+}
+
+/* BOTÓN + */
+
+.icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border-blanco);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 60px;
+
+    font-size: 18px;
+    flex-shrink: 0;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
-.container-estudios {
-    background-color: var(--color-fondo-container);
-    width: 500px;
-    height: 300px;
+.card.active .icon {
+    background: var(--color-principal);
+    color: var(--color-letras-blanco);
+    transform: rotate(180deg);
 }
 
-.container-experiencia{
-    background-color: var(--color-fondo-container);
-    width: 500px;
-    height: 300px;
+.card-content {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows 0.45s ease;
+}
+
+.card.active .card-content {
+    grid-template-rows: 1fr;
+}
+
+.card-content-inner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* ELEMENTOS INTERIORES */
+
+.item {
+    margin: 0 24px 22px;
+    padding-left: 12px;
+    border-left: 2px solid var(--color-seconday);
+}
+
+.item span {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--color-seconday);
+}
+
+.item h3 {
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+.item p {
+    font-size: 13px;
+    color: var(--color-seconday);
+    margin: 0;
 }
