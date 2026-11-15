@@ -354,12 +354,16 @@ h2 {
 }
 
 .social-links {
-    text-decoration: none;
     display: flex;
     gap: 22px;
     justify-content: center;
     margin-top: 30px;
     color: var(--color-seconday);
+}
+
+.social-links a {
+    text-decoration: none;    
+    color: var(--color-seconday); 
 }
 
 /* FOOTER */ 
