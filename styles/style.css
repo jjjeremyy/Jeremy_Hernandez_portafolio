@@ -141,7 +141,6 @@ h2 {
 
 .section-proyectos{
     height: 100vh;       
-    box-sizing: border-box;
 }
 
 .imagenSobreMi {
@@ -151,7 +150,6 @@ h2 {
 
 .section-sobre-mi {
     height: 100vh;       
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     gap: 100px;
@@ -180,9 +178,11 @@ h2 {
 }
 
 .trayectoria {
+    height: 100vh;       
     max-width: 1100px;
     margin: 80px auto;
     padding: 20px;
+    text-align: center;
 }
 
 .trayectoria h1 {
@@ -198,6 +198,7 @@ h2 {
 /* CONTENEDOR */
 
 .cards {
+    padding-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
