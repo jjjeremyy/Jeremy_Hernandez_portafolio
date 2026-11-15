@@ -8,7 +8,6 @@
     --body: 'DM Sans', system-ui, sans-serif;
     --display: 'Bricolage Grotesque',system-ui,sans-serif;
     --border-blanco: #e1e9e3;
-    --border-verde:  #8cc9aa; 
 }
 
 html {
@@ -223,7 +222,7 @@ h2 {
 
 .trayectoria .card.active {
     background: var(--color-fondo-container);
-    border-color: var(--border-verde);
+    border-color: var(--color-principal);
 
      transition:
         background 0.4s ease,
