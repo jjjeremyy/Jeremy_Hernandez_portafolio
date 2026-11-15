@@ -129,6 +129,10 @@ main {
 
 /* PROYECTOS */ 
 
+.section-proyectos{
+    height: 100vh;       
+}
+
 h2 {
     font-family: var(--display);
     font-weight: 700;
@@ -142,9 +146,8 @@ h2 {
     height: 200px;
 }
 
-.section-proyectos{
-    height: 100vh;       
-}
+/* SOBRE MI */ 
+
 
 .imagenSobreMi {
     width: 300px;
