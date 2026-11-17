@@ -1,159 +1,232 @@
 <!DOCTYPE html>
-<html lang="es"> 
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles/style.css">
-        <title> Jeremy S. Hernández Fraga</title>
-    </head>
-    <body> 
-        <nav class="navbar">
-            <a href="#proyectos">Proyectos</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#trayectoria">Trayectoria</a>
-            <a href="#herramientas">Herramientas</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-        
-        <header class="hero" id="inicio">
-            <div>
-                <span> 
-                    <h1 class="tituloPortada">Jeremy S. Hernández Fraga</h1>
-                </span>
-            </div>
-            <p>Me gusta desarollar nuevos proyectos, la creatividad y aprender</p>
-        </header>
-                    
-        <main> 
-            <section id="proyectos" class="section-proyectos"> 
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title> Jeremy S. Hernández Fraga</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div>
+            <span>
+                <h1 class="tituloPortada">Jeremy S. Hernández Fraga</h1>
+            </span>
+        </div>
+        <p>Me gusta desarollar nuevos proyectos, la creatividad y aprender</p>
+    </header>
+
+    <main>
+        <section id="proyectos" class="section-proyectos">
+            <div class="proyectos-header">
                 <h2>Proyectos</h2>
+            </div>
 
-                <div class="rail">
-                    <div class="slot">
-                        <button class="card">
-                            <div">
-                                <img src="galeria/Jeremy.jpg" class="imagen">
-                            </div>
-                            <h3>Proyecto 1</h3>
-                            <p>Aplicacion de habitos </p>
-                        </button>
-                    </div>
-                </div>
-            </section>
+                <div class="carousel-wrapper" id="proyectosCarousel">
+                    <button class="carousel-btn prev-btn" id="carouselPrevBtn" aria-label="Proyecto anterior">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
 
-            <section id="sobre-mi" class="section-sobre-mi"> 
-
-                <div>
-                    <img src="galeria/Jeremy.jpg" class="imagenSobreMi">
-                </div>
-                
-                <div class="sobre-mi-content">
-                    <h2>Sobre mí</h2>
-                    <p> 
-                        Me gusta la programación, la creatividad i
-                        crear proyectosgusta la programación, 
-                        gusta la programación, 
-                        gusta la programación, gusta la programación, 
-                        gusta la programación,  
-                    </p>
-
-                    <div class="habilidades-container">
-                        <span>Habilidad 1</span>
-                        <span>Habilidad 2</span>
-                        <span>Habilidad 3</span>
-                        <span>Habilidad 4</span>
-                        <span>Habilidad 5</span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="trayectoria" class="trayectoria">
-
-                <h2>Mi trayectoria</h2>
-
-                <div class="cards">
-
-                    <article class="card">
-
-                        <button class="card-header" aria-expanded="false">
-                            <div>
-                                <h2>Experiencia</h2>
-                            </div>
-
-                            <span class="icon">+</span>
-                        </button>
-
-                        <div class="card-content">
-                            <div class="card-content-inner">
-
-                                <div class="item">
-                                    <span>2023 - Actualidad</span>
-                                    <h3> Restaurante Merlet</h3>
-                                    <p>Ayudande de camarero</p>
+                    <div class="carousel-viewport" id="carouselViewport">
+                        <div class="carousel-track" id="carouselTrack">
+                            <article class="proyecto-card" data-index="0">
+                                <div class="proyecto-preview">
+                                    <div class="proyecto-preview-placeholder"></div>
                                 </div>
-                            </div>
+                                <div class="proyecto-detalles">
+                                    <h3>Aplicación de Hábitos</h3>
+                                    <p>Aplicación interactiva para el seguimiento de rutinas diarias con métricas y
+                                        recordatorios personalizados.</p>
+                                </div>
+                            </article>
+
+                            <article class="proyecto-card" data-index="1">
+                                <div class="proyecto-preview">
+                                    <div class="proyecto-preview-placeholder"></div>
+                                </div>
+                                <div class="proyecto-detalles">
+                                    <h3>Instalaciones Inteligentes</h3>
+                                    <p>Diseño y simulación de circuitos y automatismos eléctricos para sistemas
+                                        residenciales e industriales.</p>
+                                </div>
+                            </article>
+
+                            <article class="proyecto-card" data-index="2">
+                                <div class="proyecto-preview">
+                                    <div class="proyecto-preview-placeholder"></div>
+                                </div>
+                                <div class="proyecto-detalles">
+                                    <h3>Plataforma E-Commerce</h3>
+                                    <p>Tienda digital interactiva con catálogo dinámico, filtros por categoría y carrito
+                                        de compras en tiempo real.</p>
+                                </div>
+                            </article>
+
+                            <article class="proyecto-card" data-index="3">
+                                <div class="proyecto-preview">
+                                    <div class="proyecto-preview-placeholder"></div>
+                                </div>
+                                <div class="proyecto-detalles">
+                                    <h3>Task Flow Manager</h3>
+                                    <p>Herramienta de productividad ágil para la organización y seguimiento de proyectos
+                                        con metodología Kanban.</p>
+                                </div>
+                            </article>
+
+                            <article class="proyecto-card" data-index="4">
+                                <div class="proyecto-preview">
+                                    <div class="proyecto-preview-placeholder"></div>
+                                </div>
+                                <div class="proyecto-detalles">
+                                    <h3>Portfolio Interactivo</h3>
+                                    <p>Diseño web minimalista y accesible con transiciones dinámicas, componentes
+                                        interactivos y diseño responsive.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn next-btn" id="carouselNextBtn" aria-label="Siguiente proyecto">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+        </section>
+
+        <section id="sobre-mi" class="section-sobre-mi">
+
+            <div>
+                <img src="galeria/Jeremy.jpg" class="imagenSobreMi">
+            </div>
+
+            <div class="sobre-mi-content">
+                <h2>Sobre mí</h2>
+                <p>
+                    Me gusta la programación, la creatividad i
+                    crear proyectosgusta la programación,
+                    gusta la programación,
+                    gusta la programación, gusta la programación,
+                    gusta la programación,
+                </p>
+
+                <div class="habilidades-container">
+                    <span>Habilidad 1</span>
+                    <span>Habilidad 2</span>
+                    <span>Habilidad 3</span>
+                    <span>Habilidad 4</span>
+                    <span>Habilidad 5</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="trayectoria" class="trayectoria">
+
+            <h2>Mi trayectoria</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <button class="card-header" aria-expanded="false">
+                        <div>
+                            <h2>Experiencia</h2>
                         </div>
 
-                    </article>
+                        <span class="icon">+</span>
+                    </button>
 
-                    <article class="card">
+                    <div class="card-content">
+                        <div class="card-content-inner">
 
-                        <button class="card-header" aria-expanded="false">
-                            <div>
-                                <h2>Estudios</h2>
-                            </div>
-                            <span class="icon">+</span>
-                        </button>
-
-                        <div class="card-content">
-                            <div class="card-content-inner">
-
-                                <div class="item">
-                                    <span>2025 - Actualidad</span>
-                                    <h3>Grado superior</h3>
-                                    <p>Desarrollo de Aplicaciones Multiplataforma.</p>
-                                </div>
-
-                                <div class="item">
-                                    <span>2023 - 2025</span>
-                                    <h3>Grado medio</h3>
-                                    <p>Instalaciones electricas y atomaticas</p>
-                                </div>
-
-                                <div class="item">
-                                    <span>2019 - 2023
-                                    </span>
-                                    <h3>ESO</h3>
-                                    <p>Esducación secondaria obligatoria</p>
-                                </div>
-
+                            <div class="item">
+                                <span>2023 - Actualidad</span>
+                                <h3> Restaurante Merlet</h3>
+                                <p>Ayudande de camarero</p>
                             </div>
                         </div>
+                    </div>
 
-                    </article>
-                </div>
-            </section>
-            
-            <section id="herramientas" class="section-herramientas">
-                <h2>Herramientas</h2>
-            </section>
+                </article>
 
-            <section id="contacto" class="section-contacto">
-                <h2>Hablemos</h2>
-                <a  class="mail" href="mailto:jeremy123fraga@gmail.com" target="_blank">jeremy123fraga@gmail.com</a>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/jeremy-samuel-hern%C3%A1ndez-fraga-a4b106238/" target="_blank">Linkeding</a>
-                    <a href="https://github.com/jjjeremyy" target="_blank">Github</a>
-                    <a href="">Descargar CV</a>
-                </div>
-            </section>
-        </main>
-        <footer>
-            © 2026 Jeremy S. Hernandez Fraga
-        </footer>
-        <script src="./scripts/scripts.js"></script>
-    </body>
+                <article class="card">
+
+                    <button class="card-header" aria-expanded="false">
+                        <div>
+                            <h2>Estudios</h2>
+                        </div>
+                        <span class="icon">+</span>
+                    </button>
+
+                    <div class="card-content">
+                        <div class="card-content-inner">
+
+                            <div class="item">
+                                <span>2025 - Actualidad</span>
+                                <h3>Grado superior</h3>
+                                <p>Desarrollo de Aplicaciones Multiplataforma.</p>
+                            </div>
+
+                            <div class="item">
+                                <span>2023 - 2025</span>
+                                <h3>Grado medio</h3>
+                                <p>Instalaciones electricas y atomaticas</p>
+                            </div>
+
+                            <div class="item">
+                                <span>2019 - 2023
+                                </span>
+                                <h3>ESO</h3>
+                                <p>Esducación secondaria obligatoria</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="herramientas" class="section-herramientas">
+            <h2>Herramientas</h2>
+        </section>
+
+        <section id="contacto" class="section-contacto">
+            <h2>Hablemos</h2>
+            <a class="mail" href="mailto:jeremy123fraga@gmail.com" target="_blank">jeremy123fraga@gmail.com</a>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/jeremy-samuel-hern%C3%A1ndez-fraga-a4b106238/"
+                    target="_blank">Linkeding</a>
+                <a href="https://github.com/jjjeremyy" target="_blank">Github</a>
+                <a href="">Descargar CV</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2026 Jeremy S. Hernandez Fraga
+    </footer>
+    <script src="./scripts/scripts.js"></script>
+</body>
+
 </html>
